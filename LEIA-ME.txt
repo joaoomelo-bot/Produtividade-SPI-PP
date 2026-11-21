@@ -1,0 +1,17 @@
+SPI-PP | PRODUTIVIDADE - VERSÃO COMPARTILHADA
+
+1. O site importa um Excel com abas "Base de Dados - Separacao" e "Base de Dados - Conferencia".
+2. A importação substitui o acumulado de cada data presente no arquivo.
+3. Dados compartilhados são guardados no PostgreSQL (não no navegador).
+4. Para publicar: suba esta pasta para um repositório Git PRIVADO e conecte-o ao Render como Web Service Python.
+   Build: pip install -r requirements.txt
+   Start: gunicorn server:app --bind 0.0.0.0:$PORT
+   Plano: Free, caso disponível na conta.
+5. Configure no Render: DATABASE_URL (PostgreSQL persistente), UPLOAD_KEY e VIEW_KEY (segredos diferentes, fortes).
+6. Informe VIEW_KEY para visualizar e UPLOAD_KEY para importar. O link público não deve expor as chaves.
+7. O banco PostgreSQL é obrigatório para compartilhar resultados. Planos gratuitos podem ter prazo e limites.
+8. O site depende da biblioteca XLSX carregada por CDN; é necessário acesso à internet.
+9. Antes de usar com dados reais, teste as contagens de caixas/OTs e os horários com a base original.
+10. Não faça upload da base de colaboradores em repositório público.
+
+IMPORTANTE: esta pasta não está publicada; o Render precisa de um repositório Git conectado e das três variáveis de ambiente.
