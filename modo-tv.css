@@ -1,7 +1,0 @@
-/* Aplique .spi-tv-scroll ao contêiner da tabela de horários no Modo TV. */
-.spi-tv-scroll { max-height: calc(100vh - 180px); overflow-y: auto; overflow-x: auto; scroll-behavior: smooth; }
-.spi-tv-scroll table { width: 100%; border-collapse: separate; border-spacing: 0; }
-.spi-tv-scroll thead th { position: sticky; top: 0; z-index: 2; background: #10253e; color: white; }
-.spi-tv-scroll td, .spi-tv-scroll th { white-space: nowrap; padding: 10px 14px; font-variant-numeric: tabular-nums; }
-@media (min-width: 1600px) { .spi-tv-scroll td, .spi-tv-scroll th { font-size: clamp(16px, 1.25vw, 24px); } }
-@media (max-height: 700px) { .spi-tv-scroll { max-height: calc(100vh - 120px); } }
